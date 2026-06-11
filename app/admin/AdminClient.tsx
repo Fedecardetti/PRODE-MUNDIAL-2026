@@ -2,25 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-
-const FLAG_EMOJI: Record<string, string> = {
-  Mexico: "🇲🇽", Poland: "🇵🇱", "Saudi Arabia": "🇸🇦", Cameroon: "🇨🇲",
-  USA: "🇺🇸", Serbia: "🇷🇸", Morocco: "🇲🇦", "New Zealand": "🇳🇿",
-  Canada: "🇨🇦", Belgium: "🇧🇪", Japan: "🇯🇵", Peru: "🇵🇪",
-  Brazil: "🇧🇷", Switzerland: "🇨🇭", Iran: "🇮🇷", "South Africa": "🇿🇦",
-  Argentina: "🇦🇷", Croatia: "🇭🇷", Nigeria: "🇳🇬", Qatar: "🇶🇦",
-  France: "🇫🇷", Australia: "🇦🇺", Ecuador: "🇪🇨", Slovakia: "🇸🇰",
-  Spain: "🇪🇸", Uruguay: "🇺🇾", "South Korea": "🇰🇷", Jamaica: "🇯🇲",
-  England: "🏴󠁧󠁢󠁥󠁮󠁧󠁿", Netherlands: "🇳🇱", Senegal: "🇸🇳", Bolivia: "🇧🇴",
-  Germany: "🇩🇪", Colombia: "🇨🇴", Egypt: "🇪🇬", China: "🇨🇳",
-  Portugal: "🇵🇹", Denmark: "🇩🇰", Venezuela: "🇻🇪", Uzbekistan: "🇺🇿",
-  Italy: "🇮🇹", Sweden: "🇸🇪", Honduras: "🇭🇳", Paraguay: "🇵🇾",
-  Romania: "🇷🇴", Scotland: "🏴󠁧󠁢󠁳󠁣󠁴󠁿", Chile: "🇨🇱", "Costa Rica": "🇨🇷",
-};
-
-function getFlag(team: string) {
-  return FLAG_EMOJI[team] || "🏳️";
-}
+import { getFlag } from "@/lib/flags";
 
 interface Match {
   id: string;

@@ -4,18 +4,18 @@ import bcrypt from "bcryptjs";
 const prisma = new PrismaClient();
 
 const groups = [
-  { group: "A", teams: ["Mexico", "Poland", "Saudi Arabia", "Cameroon"] },
-  { group: "B", teams: ["USA", "Serbia", "Morocco", "New Zealand"] },
-  { group: "C", teams: ["Canada", "Belgium", "Japan", "Peru"] },
-  { group: "D", teams: ["Brazil", "Switzerland", "Iran", "South Africa"] },
-  { group: "E", teams: ["Argentina", "Croatia", "Nigeria", "Qatar"] },
-  { group: "F", teams: ["France", "Australia", "Ecuador", "Slovakia"] },
-  { group: "G", teams: ["Spain", "Uruguay", "South Korea", "Jamaica"] },
-  { group: "H", teams: ["England", "Netherlands", "Senegal", "Bolivia"] },
-  { group: "I", teams: ["Germany", "Colombia", "Egypt", "China"] },
-  { group: "J", teams: ["Portugal", "Denmark", "Venezuela", "Uzbekistan"] },
-  { group: "K", teams: ["Italy", "Sweden", "Honduras", "Paraguay"] },
-  { group: "L", teams: ["Romania", "Scotland", "Chile", "Costa Rica"] },
+  { group: "A", teams: ["México", "Sudáfrica", "Corea del Sur", "Chequia"] },
+  { group: "B", teams: ["Canadá", "Bosnia y Herzegovina", "Catar", "Suiza"] },
+  { group: "C", teams: ["Brasil", "Marruecos", "Haití", "Escocia"] },
+  { group: "D", teams: ["Estados Unidos", "Paraguay", "Australia", "Turquía"] },
+  { group: "E", teams: ["Alemania", "Curazao", "Costa de Marfil", "Ecuador"] },
+  { group: "F", teams: ["Países Bajos", "Japón", "Suecia", "Túnez"] },
+  { group: "G", teams: ["Bélgica", "Egipto", "Irán", "Nueva Zelanda"] },
+  { group: "H", teams: ["España", "Cabo Verde", "Arabia Saudita", "Uruguay"] },
+  { group: "I", teams: ["Francia", "Senegal", "Irak", "Noruega"] },
+  { group: "J", teams: ["Argentina", "Argelia", "Austria", "Jordania"] },
+  { group: "K", teams: ["Portugal", "RD Congo", "Uzbekistán", "Colombia"] },
+  { group: "L", teams: ["Inglaterra", "Croacia", "Ghana", "Panamá"] },
 ];
 
 const matchdayDates = {
