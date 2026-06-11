@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { getFlag } from "@/lib/flags";
+import { Flag } from "@/components/Flag";
 
 interface Match {
   id: string;
@@ -162,7 +162,7 @@ export function AdminClient({ matches }: { matches: Match[] }) {
                       {/* Home */}
                       <div className="flex-1 flex items-center gap-1 justify-end">
                         <span className="text-slate-200 text-xs text-right">{match.homeTeam}</span>
-                        <span>{getFlag(match.homeTeam)}</span>
+                        <Flag team={match.homeTeam} size={24} />
                       </div>
 
                       {/* Score inputs */}
@@ -190,7 +190,7 @@ export function AdminClient({ matches }: { matches: Match[] }) {
 
                       {/* Away */}
                       <div className="flex-1 flex items-center gap-1">
-                        <span>{getFlag(match.awayTeam)}</span>
+                        <Flag team={match.awayTeam} size={24} />
                         <span className="text-slate-200 text-xs">{match.awayTeam}</span>
                       </div>
 

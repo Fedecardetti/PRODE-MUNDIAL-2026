@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import { getFlag } from "@/lib/flags";
+import { Flag } from "@/components/Flag";
 
 function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString("es-AR", {
@@ -144,7 +144,7 @@ export function ProdeClient({ matches, initialPredictions }: Props) {
                         <span className="text-slate-200 text-sm font-medium text-right leading-tight">
                           {match.homeTeam}
                         </span>
-                        <span className="text-2xl">{getFlag(match.homeTeam)}</span>
+                        <Flag team={match.homeTeam} size={32} />
                       </div>
 
                       {/* Score inputs */}
@@ -172,7 +172,7 @@ export function ProdeClient({ matches, initialPredictions }: Props) {
 
                       {/* Away */}
                       <div className="flex-1 flex items-center gap-2">
-                        <span className="text-2xl">{getFlag(match.awayTeam)}</span>
+                        <Flag team={match.awayTeam} size={32} />
                         <span className="text-slate-200 text-sm font-medium leading-tight">
                           {match.awayTeam}
                         </span>
